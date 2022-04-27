@@ -17,7 +17,7 @@ import java.util.List;
  *
  * @author Nivesh Sharma
  */
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping(value = "/api/v1/creditCards")
 @RestController
 public class CreditCardController {
