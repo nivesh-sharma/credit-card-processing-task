@@ -7,21 +7,38 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Represents a credit card model.
+ *
+ * @author Nivesh Sharma
+ */
 @Data
 @Entity
 @Table(name = "CreditCard")
 public class CreditCard {
 
+    /**
+     * The Customer Name.
+     */
     @Column(nullable = false)
     private String customerName;
 
+    /**
+     * The Credit Card Number.
+     */
     @Column(nullable = false, length = 19)
     @Id
     private String cardNumber;
 
+    /**
+     * Credit Card Limit.
+     */
     @Column(nullable = false)
     private int cardLimit;
 
+    /**
+     * Credit Card Balance.
+     */
     @Column(nullable = false)
     private int cardBalance;
 
@@ -33,12 +50,12 @@ public class CreditCard {
     }
 
     /**
-     * Credit Card Constructor.
+     * Credit Card Details Constructor.
      *
-     * @param customerName
-     * @param cardNumber
-     * @param cardLimit
-     * @param cardBalance
+     * @param customerName Customer Name.
+     * @param cardNumber   Card Number.
+     * @param cardLimit    Card Limit.
+     * @param cardBalance  Card Balance.
      */
     public CreditCard(String customerName, String cardNumber, int cardLimit, int cardBalance) {
         this.customerName = customerName;
@@ -46,6 +63,5 @@ public class CreditCard {
         this.cardLimit = cardLimit;
         this.cardBalance = cardBalance;
     }
-
 }
 
