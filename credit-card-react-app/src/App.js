@@ -29,13 +29,13 @@ function App() {
 
   const isFormValid = () => {
     const customerNameRegex = /^[^0-9.]+$/;
-    const cardLimitRegex = /^[0-9]+$/;
+    const numericRegex = /^[0-9]+$/;
     let errors = {customerName: true, cardNumber: true, cardLimit: true};
     if (customerNameRegex.test(card.customerName))
       errors.customerName = false;
-    if (checkCardNumber())
+    if (checkCardNumber() && numericRegex.test(card.cardNumber))
       errors.cardNumber = false;
-    if (cardLimitRegex.test(card.cardLimit) && card.cardLimit >= 0)
+    if (numericRegex.test(card.cardLimit) && card.cardLimit >= 0)
       errors.cardLimit = false;
     setValidationErrors(errors);
     return !Object.values(errors).some(error => error === true);

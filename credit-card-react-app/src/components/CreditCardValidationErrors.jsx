@@ -11,7 +11,7 @@ const ValidationErrors = props => {
       }
       {props.errors.cardNumber &&
         <div className="alert">
-        Card Number should not be more than 19 digits and should work against Luhn 10 algorithm.
+        Card Number should be numeric, should not be more than 19 digits and should follow Luhn 10 algorithm.
         </div>
       }
       {props.errors.cardLimit &&
