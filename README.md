@@ -33,7 +33,7 @@ To get the Rest API's Java/Spring Boot/JPA/H2 application `credit-card-processor
 - You can import the project on your favorite IDE:
    - Then Build and Run as Java Application
 - Another option is to run from command line:
-  - mvn spring-boot run
+  - mvn spring-boot:run
 
 Java Application should run on `http://localhost:8080/`.
 
