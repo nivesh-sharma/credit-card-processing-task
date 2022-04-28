@@ -61,9 +61,11 @@ function App() {
         error: function(xhr, status, error){
           if (xhr.status === 409) {
             alert("A Credit Card with that Number already exists!");
-          } else {
+          } else if (xhr.status === 403) {
+            alert("Credit card number is not valid as per Luhn 10 Algorithm");
+          } else  {
             alert("A service error occurred, please try again later!");
-          }
+          } 
         }
       });
     }
