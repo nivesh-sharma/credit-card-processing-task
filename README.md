@@ -16,18 +16,19 @@ Back-end:
 - Mockito Test Framework
 - Lombok
 - Maven
+- RESTful API
 
 ## Getting started
 
 - Clone the repo
 
-To get the Front-end React App running locally:
+To get the UI React App `credit-card-react-app` running locally:
 - `npm install` to install all required dependencies
 - `npm start` to start the local server 
 
 The Application should run on `http://localhost:3000/`.
 
-To get the Back-end Java/Spring Boot/JPA application running locally:
+To get the Rest API's Java/Spring Boot/JPA/H2 application `credit-card-processor-jpa` running locally:
 
 - You can import the project on your favorite IDE:
    - Then Build and Run as Java Application
